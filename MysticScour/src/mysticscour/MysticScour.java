@@ -15,7 +15,7 @@ public class MysticScour extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Main menu");
+        this.primaryStage.setTitle("Mystic Scour");
         showMainMenuPane();
     }
 
