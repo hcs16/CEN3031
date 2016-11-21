@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import mysticscour.view.MainMenuController;
 
 public class MysticScour extends Application {
 
@@ -28,8 +29,10 @@ public class MysticScour extends Application {
             Scene scene = new Scene(mainPane);
             primaryStage.setScene(scene);         
             primaryStage.show();
-            
-        } catch (IOException ex) {
+            MainMenuController MMController = loader.getController();
+           // MMController.setMain(this);
+        } 
+        catch (IOException ex) {
             ex.printStackTrace();
         }
     }
