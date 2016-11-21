@@ -30,6 +30,7 @@ public class MysticScour extends Application {
             primaryStage.show();
             
         } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 
