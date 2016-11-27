@@ -30,6 +30,7 @@ public class MysticScour extends Application {
             primaryStage.setScene(scene);         
             primaryStage.show();
             MainMenuController MMController = loader.getController();
+            
         } 
         catch (IOException ex) {
             ex.printStackTrace();
