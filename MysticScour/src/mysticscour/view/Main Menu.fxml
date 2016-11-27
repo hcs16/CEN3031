@@ -5,6 +5,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysticscour.view.MainMenuController">
    <children>
-      <Button layoutX="262.0" layoutY="188.0" mnemonicParsing="false" onAction="#test" text="Start Game" textAlignment="CENTER" />
+      <Button layoutX="262.0" layoutY="188.0" mnemonicParsing="false" onAction="#startGame" text="Start Game" textAlignment="CENTER" />
    </children>
 </AnchorPane>

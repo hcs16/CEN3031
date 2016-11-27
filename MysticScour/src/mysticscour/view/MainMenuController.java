@@ -17,7 +17,7 @@ public class MainMenuController implements Initializable {
     }
 
     @FXML
-    private void test(ActionEvent event) {
+    private void startGame(ActionEvent event) {
         System.out.println("lollolol");
     }
 }

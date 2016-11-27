@@ -16,7 +16,7 @@ public class MysticScour extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("YO Scour");
+        this.primaryStage.setTitle("Mystic Scour");
         showMainMenuPane();
     }
 
@@ -30,7 +30,6 @@ public class MysticScour extends Application {
             primaryStage.setScene(scene);         
             primaryStage.show();
             MainMenuController MMController = loader.getController();
-           // MMController.setMain(this);
         } 
         catch (IOException ex) {
             ex.printStackTrace();
