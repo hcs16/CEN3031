@@ -11,10 +11,11 @@
         <URL value="@riddle.css" />
     </stylesheets>
    <children>
-      <Label layoutX="283.0" layoutY="54.0" text="Riddle" />
+      <Label layoutX="40.0" layoutY="112.0" text="Riddle: I'm the part of a bird but not in the sky, I can swim in the ocean yet remain dry. What am I?" />
       <Button fx:id="submit" layoutX="349.0" layoutY="219.0" mnemonicParsing="false" onAction="#testAnwser" text="Submit" />
       <Label fx:id="response" layoutX="286.0" layoutY="287.0" />
       <TextField fx:id="tf" layoutX="200.0" layoutY="219.0" promptText="Answer" />
       <Button fx:id="item" layoutX="36.0" layoutY="340.0" mnemonicParsing="false" onAction="#testAnwser" text="Use Item to skip puzzle" />
+      <Label layoutX="158.0" layoutY="223.0" text="I am a :" />
    </children>
 </AnchorPane>
