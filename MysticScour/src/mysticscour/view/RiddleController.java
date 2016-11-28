@@ -33,7 +33,7 @@ public class RiddleController implements Initializable {
         }
         if (event.getSource() == submit) {
             String anwser = tf.getText();
-            if (anwser.equalsIgnoreCase("Potato")) {
+            if (anwser.equalsIgnoreCase("Shadow")) {
                 response.setText("Correct");
             } else {
                 response.setText("Incorrect");
