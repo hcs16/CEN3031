@@ -1,4 +1,5 @@
 package mysticscour.view;
+import mysticscour.model.MazePuzzle;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
@@ -10,9 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import mysticscour.MysticScour;
 
 public class MainMenuController implements Initializable {
 
@@ -80,6 +79,8 @@ public class MainMenuController implements Initializable {
 
     @FXML
     private void Maze(ActionEvent event) throws IOException {
+        String[] s = {"8"};
+        MazePuzzle.MazePuzzleStart(s);
         Stage stage = null;
         Parent root = null;
         if (event.getSource() == maze) {
