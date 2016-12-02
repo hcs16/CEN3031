@@ -26,9 +26,10 @@
             <Slider fx:id="slider4" blockIncrement="0.1" layoutX="10.0" layoutY="77.0" majorTickUnit="0.1" max="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Slider fx:id="slider1" blockIncrement="0.1" layoutX="170.0" layoutY="77.0" majorTickUnit="0.1" max="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
             <Slider fx:id="slider2" blockIncrement="0.1" layoutX="10.0" layoutY="10.0" majorTickUnit="0.1" max="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" />
-            <Button fx:id="item" mnemonicParsing="false" onAction="#unlock" text="Item" GridPane.rowIndex="2" />
+            <Button fx:id="item" mnemonicParsing="false" onAction="#unlock" text="Use item to skip puzzle" GridPane.rowIndex="2" />
             <Button fx:id="unlock" mnemonicParsing="false" onAction="#unlock" text="Unlock" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="response" alignment="CENTER" contentDisplay="CENTER" text="Adjust sliders to unlock" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="nextPuzzle" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          </children>
       </GridPane>
     </children>

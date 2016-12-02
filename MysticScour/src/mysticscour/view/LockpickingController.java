@@ -5,10 +5,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.stage.Stage;
 
 /**
  *
@@ -20,7 +24,8 @@ public class LockpickingController implements Initializable {
     private Button unlock;
     @FXML
     private Button item;
-
+    @FXML
+    private Button nextPuzzle;
     @FXML
     private Slider slider1;
     @FXML
@@ -37,6 +42,7 @@ public class LockpickingController implements Initializable {
     private void unlock(ActionEvent event) throws IOException {
         if (event.getSource() == item) {
             response.setText("Skipped");
+            nextPuzzle.setVisible(true);
         }
         if (event.getSource() == unlock) {
             double value1 = slider1.getValue();
@@ -47,6 +53,7 @@ public class LockpickingController implements Initializable {
             //correct answer
             if (value1 == .8 && value2 == .2 && value3 == .6 && value4 == .4) {
                 response.setText("The door has been unlocked");
+                nextPuzzle.setVisible(true);
             } //all sliders too far
             else if (value1 > .8 && value2 > .2 && value3 > .6 && value4 > .4) {
                 response.setText("All are too far");
@@ -103,6 +110,16 @@ public class LockpickingController implements Initializable {
         }
     }
 
+           public void loadNextPuzzle() throws IOException {
+        Stage stage = null;
+        Parent root = null;
+        stage = (Stage) nextPuzzle.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Matching.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+           
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

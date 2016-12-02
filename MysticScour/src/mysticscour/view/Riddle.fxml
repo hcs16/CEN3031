@@ -17,5 +17,6 @@
       <TextField fx:id="tf" layoutX="200.0" layoutY="219.0" promptText="Answer" />
       <Button fx:id="item" layoutX="36.0" layoutY="340.0" mnemonicParsing="false" onAction="#testAnwser" text="Use Item to skip puzzle" />
       <Label layoutX="158.0" layoutY="223.0" text="I am a :" />
+      <Button fx:id="nextPuzzle" layoutX="274.0" layoutY="340.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" />
    </children>
 </AnchorPane>
