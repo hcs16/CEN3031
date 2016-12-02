@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,14 +32,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="stone2" mnemonicParsing="false" onAction="#clickWrong" text="          " GridPane.columnIndex="1" />
-            <Button fx:id="stone1" mnemonicParsing="false" onAction="#clickWrong" text="          " />
-            <Button fx:id="stone4" mnemonicParsing="false" onAction="#clickWrong" text="          " GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="stone3" mnemonicParsing="false" onAction="#clickWrong" text="          " GridPane.rowIndex="1" />
-            <Button fx:id="stone6" mnemonicParsing="false" onAction="#clickRight" text="          " GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="stone5" mnemonicParsing="false" onAction="#clickWrong" text="          " GridPane.rowIndex="2" />
-            <Button fx:id="stone8" mnemonicParsing="false" onAction="#clickWrong" text="          " GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="stone7" mnemonicParsing="false" onAction="#clickWrong" text="          " GridPane.rowIndex="3" />
+            <Button fx:id="stone2" mnemonicParsing="false" onAction="#clickWrong" text="    2    " GridPane.columnIndex="1" />
+            <Button fx:id="stone1" mnemonicParsing="false" onAction="#clickWrong" text="    1    " />
+            <Button fx:id="stone4" mnemonicParsing="false" onAction="#clickWrong" text="    4    " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="stone3" mnemonicParsing="false" onAction="#clickWrong" text="    3    " GridPane.rowIndex="1" />
+            <Button fx:id="stone6" mnemonicParsing="false" onAction="#clickRight" text="    6    " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="stone5" mnemonicParsing="false" onAction="#clickWrong" text="    5    " GridPane.rowIndex="2" />
+            <Button fx:id="stone8" mnemonicParsing="false" onAction="#clickWrong" text="    8    " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="stone7" mnemonicParsing="false" onAction="#clickWrong" text="    7    " GridPane.rowIndex="3" />
             <Button fx:id="item" mnemonicParsing="false" onAction="#item" text="Use item to skip puzzle" GridPane.columnIndex="2" />
             <MenuButton fx:id="menuButton" mnemonicParsing="false" text="Weigh Multiple Stones" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <items>
@@ -105,6 +106,8 @@
          </image>
       </ImageView>
       <Label fx:id="response" layoutX="471.0" layoutY="166.0" />
-      <Button fx:id="nextPuzzle" layoutX="453.0" layoutY="170.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" />
+      <Button fx:id="nextPuzzle" layoutX="247.0" layoutY="229.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" />
+      <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;You turn around the corner and finally find the end of the maze.  " />
+      <Button fx:id="startPuzzle" layoutX="471.0" layoutY="342.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
    </children>
 </AnchorPane>

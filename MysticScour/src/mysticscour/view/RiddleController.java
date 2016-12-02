@@ -11,11 +11,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class RiddleController implements Initializable {
 
+    @FXML
+    private Button startPuzzle;
+    
+    @FXML
+    private TextArea storyText;
+    
     @FXML
     private Button submit, item;
 
@@ -47,7 +54,6 @@ public class RiddleController implements Initializable {
             } else {
                 response.setText("Incorrect");
             }
-
         }
     }
 
@@ -55,10 +61,15 @@ public class RiddleController implements Initializable {
         Stage stage = null;
         Parent root = null;
         stage = (Stage) nextPuzzle.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("Scale.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Matching.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
+    public void showPuzzle()
+    {
+        startPuzzle.setVisible(false);
+        storyText.setVisible(false);
+    }
 }

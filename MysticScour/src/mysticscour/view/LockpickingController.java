@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 /**
@@ -19,6 +20,12 @@ import javafx.stage.Stage;
  * @author Hunter
  */
 public class LockpickingController implements Initializable {
+
+    @FXML
+    private Button startPuzzle;
+
+    @FXML
+    private TextArea storyText;
 
     @FXML
     private Button unlock;
@@ -110,16 +117,21 @@ public class LockpickingController implements Initializable {
         }
     }
 
-           public void loadNextPuzzle() throws IOException {
+    public void loadNextPuzzle() throws IOException {
         Stage stage = null;
         Parent root = null;
         stage = (Stage) nextPuzzle.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("Matching.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Riddle.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-           
+
+    public void showPuzzle() {
+        startPuzzle.setVisible(false);
+        storyText.setVisible(false);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

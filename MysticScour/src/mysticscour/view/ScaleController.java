@@ -20,6 +20,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import mysticscour.model.MazePuzzle;
 
@@ -42,6 +43,12 @@ public class ScaleController implements Initializable {
     boolean winner = false;
 
     @FXML
+    private Button startPuzzle;
+
+    @FXML
+    private TextArea storyText;
+
+    @FXML
     private Button nextPuzzle;
 
     @FXML
@@ -55,6 +62,11 @@ public class ScaleController implements Initializable {
 
     @FXML
     private ImageView original, same1, same2, same3, different1, different2, different3, oneStone, twoStones, threeStones;
+
+    public void showPuzzle() {
+        startPuzzle.setVisible(false);
+        storyText.setVisible(false);
+    }
 
     @FXML
     private void clickWrong(ActionEvent event) throws InterruptedException {
@@ -117,17 +129,6 @@ public class ScaleController implements Initializable {
 
     }
 
-    public void loadNextPuzzle() throws IOException {
-        String[] s = {"8"};
-        MazePuzzle.MazePuzzleStart(s);
-        Stage stage = null;
-        Parent root = null;
-        stage = (Stage) nextPuzzle.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("Maze.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

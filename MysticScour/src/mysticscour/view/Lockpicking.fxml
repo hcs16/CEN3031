@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -32,5 +33,7 @@
             <Button fx:id="nextPuzzle" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          </children>
       </GridPane>
+      <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;&#10;&#10;&#10;“What happened?”  Your head is ringing and you slowly manage to pick yourself up.  You look up and see &#10;the pit that you fell in, the slope probably the main reason that you lived as you rolled down it rather than &#10;falling straight down.  Too steep to climb up, you decide to walk further into this area once your eyes adjust to&#10;the dim light.&#10;&#10;You come across a door with four sliding latches, written in common are the words, slide all four latches into &#10;their correct place and the door will open.  Be warned, failure will be met with an untimely demise though.  &#10;" />
+      <Button fx:id="startPuzzle" layoutX="495.0" layoutY="361.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
     </children>
 </AnchorPane>

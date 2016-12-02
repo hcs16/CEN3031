@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="mysticscour.view.MazeController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysticscour.view.MazeController">
     <stylesheets>
         <URL value="@maze.css" />
     </stylesheets>
    <children>
-      <Label layoutX="286.0" layoutY="192.0" text="Maze" />
+      <Button fx:id="nextPuzzle" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" />
+      <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;&#10;&#10;The last two tiles are flipped and the unnatural light gets unbearably brighter for a second before falling to a &#10;tolerable level.  You can now see how to go in the next path.  &#10;&#10;You find two giant walls made of stone, about ten feet tall winding through various ways in a giant room.  &#10;You decide to push through this labyrinth to get to the other side, hoping to find a door to get through.&#10;" />
+      <Button fx:id="startPuzzle" layoutX="504.0" layoutY="337.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
    </children>
 </AnchorPane>

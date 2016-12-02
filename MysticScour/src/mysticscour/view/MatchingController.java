@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -23,6 +24,11 @@ import javafx.stage.Stage;
 public class MatchingController implements Initializable {
 
     int clicks = 0;
+    @FXML
+    private Button startPuzzle;
+
+    @FXML
+    private TextArea storyText;
 
     @FXML
     private Button item, begin, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12;
@@ -42,6 +48,11 @@ public class MatchingController implements Initializable {
             response.setText("Skipped");
             nextPuzzle.setVisible(true);
         }
+    }
+
+    public void showPuzzle() {
+        startPuzzle.setVisible(false);
+        storyText.setVisible(false);
     }
 
     @FXML
@@ -640,7 +651,7 @@ public class MatchingController implements Initializable {
         Stage stage = null;
         Parent root = null;
         stage = (Stage) nextPuzzle.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("Riddle.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Maze.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
