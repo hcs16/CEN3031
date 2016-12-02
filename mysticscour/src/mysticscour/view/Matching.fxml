@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysticscour.view.MatchingController">
+    <stylesheets>
+        <URL value="@matching.css" />
+    </stylesheets>
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#click1" text="    1     " visible="false" />
+            <Button fx:id="btn2" mnemonicParsing="false" onAction="#click2" text="    2     " visible="false" GridPane.columnIndex="1" />
+            <Button fx:id="btn4" mnemonicParsing="false" onAction="#click4" text="    4     " visible="false" GridPane.rowIndex="1" />
+            <Button fx:id="btn3" mnemonicParsing="false" onAction="#click3" text="    3     " visible="false" GridPane.columnIndex="2" />
+            <Button fx:id="btn5" mnemonicParsing="false" onAction="#click5" text="    5     " visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btn6" mnemonicParsing="false" onAction="#click6" text="    6     " visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn7" mnemonicParsing="false" onAction="#click7" text="    7     " visible="false" GridPane.rowIndex="2" />
+            <Button fx:id="btn8" mnemonicParsing="false" onAction="#click8" text="    8     " visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn9" mnemonicParsing="false" onAction="#click9" text="    9     " visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="item" mnemonicParsing="false" onAction="#item" text="Use item to skip puzzle" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="btn10" mnemonicParsing="false" onAction="#click10" text="    10    " visible="false" GridPane.rowIndex="3" />
+            <Button fx:id="btn11" mnemonicParsing="false" onAction="#click11" text="    11    " visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btn12" mnemonicParsing="false" onAction="#click12" text="    12    " visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="response" text="Click boxes to reveal matching images." GridPane.rowIndex="4">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img1" fitHeight="83.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/skullAndCrossbones.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img8" fitHeight="83.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../resources/skullAndCrossbones.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img4" fitHeight="52.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../resources/dinosaur.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img2" fitHeight="52.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../../resources/dinosaur.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img3" fitHeight="63.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../../resources/bone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img11" fitHeight="52.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../resources/bone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img5" fitHeight="71.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../resources/archeologist.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img12" fitHeight="71.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../resources/archeologist.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img6" fitHeight="80.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../resources/cave.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img10" fitHeight="80.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../../resources/cave.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img9" fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../resources/diamond.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img7" fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../../resources/diamond.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="begin" mnemonicParsing="false" onAction="#begin" text="Begin" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="nextPuzzle" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;You say the answer that you came to after careful deliberation and you hear something big.  &#10;Fearing a monster, you pull out your sword only to see the two statues moving towards you.  You dash out &#10;of the way of their feet, and watch as they move towards the other end of the room before they assume a &#10;defensive position and stand still.  You decide to keep moving forward.&#10;&#10;In the next room you find a giant puzzle of sorts in the floor, tiles that were undiscernible from each other &#10;from the top.  You pick one up and find a strange design on it, you pick up another and see a completely &#10;different design.  Written on the wall to your left are the words &#10;&#10;“Pick up two of the same symbol and the path ahead will become gradually brighter, you have to replace the &#10;tiles that do not match together.  Fail and be left to stumble in the dark forever.”  &#10;&#10;You watch as the room gets noticeably darker and you start to rush to counteract the incoming darkness &#10;before you are left in the dark.&#10;" />
+      <Button fx:id="startPuzzle" layoutX="459.0" layoutY="341.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
+   </children>
+</AnchorPane>

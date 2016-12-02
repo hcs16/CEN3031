@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysticscour.view.ScaleController">
+    <stylesheets>
+        <URL value="@scale.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="27.0" layoutY="19.0" prefHeight="35.0" prefWidth="109.0" text="There are 8 stones," />
+      <GridPane layoutY="286.0" prefHeight="112.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="stone2" mnemonicParsing="false" onAction="#clickWrong" text="    2    " GridPane.columnIndex="1" />
+            <Button fx:id="stone1" mnemonicParsing="false" onAction="#clickWrong" text="    1    " />
+            <Button fx:id="stone4" mnemonicParsing="false" onAction="#clickWrong" text="    4    " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="stone3" mnemonicParsing="false" onAction="#clickWrong" text="    3    " GridPane.rowIndex="1" />
+            <Button fx:id="stone6" mnemonicParsing="false" onAction="#clickRight" text="    6    " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="stone5" mnemonicParsing="false" onAction="#clickWrong" text="    5    " GridPane.rowIndex="2" />
+            <Button fx:id="stone8" mnemonicParsing="false" onAction="#clickWrong" text="    8    " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="stone7" mnemonicParsing="false" onAction="#clickWrong" text="    7    " GridPane.rowIndex="3" />
+            <Button fx:id="item" mnemonicParsing="false" onAction="#item" text="Use item to skip puzzle" GridPane.columnIndex="2" />
+            <MenuButton fx:id="menuButton" mnemonicParsing="false" text="Weigh Multiple Stones" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+         </children>
+      </GridPane>
+      <ImageView fx:id="original" fitHeight="102.0" fitWidth="200.0" layoutX="186.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/original.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="same1" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/same1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="same2" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/same2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="same3" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/same3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="different1" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/different1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="different2" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/different2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="different3" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/different3.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="80.0" prefHeight="17.0" prefWidth="544.0" text="You also have a judge scale. Find the one stone that weighs the least in less than 3 steps." />
+      <Label layoutX="27.0" layoutY="46.0" prefHeight="17.0" prefWidth="200.0" text="7 of which weigh exactly the same" />
+      <Label layoutX="27.0" layoutY="63.0" prefHeight="17.0" prefWidth="242.0" text="but one stone weighs less than the other 7." />
+      <Label layoutX="27.0" layoutY="142.0" prefHeight="17.0" prefWidth="158.0" text="Click on a stone to weigh it" />
+      <Label layoutX="27.0" layoutY="200.0" text="Or maybe an item would help here?" />
+      <Label layoutX="27.0" layoutY="174.0" text="or weigh multiple stones. " />
+      <ImageView fx:id="oneStone" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/single.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoStones" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/double.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeStones" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../resources/triple.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="response" layoutX="471.0" layoutY="166.0" />
+      <Button fx:id="nextPuzzle" layoutX="247.0" layoutY="229.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" />
+      <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;You turn around the corner and finally find the end of the maze.  " />
+      <Button fx:id="startPuzzle" layoutX="471.0" layoutY="342.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
+   </children>
+</AnchorPane>
