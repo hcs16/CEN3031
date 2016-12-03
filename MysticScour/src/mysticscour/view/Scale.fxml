@@ -32,15 +32,15 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="stone2" mnemonicParsing="false" onAction="#clickWrong" text="    2    " GridPane.columnIndex="1" />
-            <Button fx:id="stone1" mnemonicParsing="false" onAction="#clickWrong" text="    1    " />
-            <Button fx:id="stone4" mnemonicParsing="false" onAction="#clickWrong" text="    4    " GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="stone3" mnemonicParsing="false" onAction="#clickWrong" text="    3    " GridPane.rowIndex="1" />
-            <Button fx:id="stone6" mnemonicParsing="false" onAction="#clickRight" text="    6    " GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="stone5" mnemonicParsing="false" onAction="#clickWrong" text="    5    " GridPane.rowIndex="2" />
-            <Button fx:id="stone8" mnemonicParsing="false" onAction="#clickWrong" text="    8    " GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="stone7" mnemonicParsing="false" onAction="#clickWrong" text="    7    " GridPane.rowIndex="3" />
-            <Button fx:id="item" mnemonicParsing="false" onAction="#item" text="Use item to skip puzzle" GridPane.columnIndex="2" />
+            <Button fx:id="stone2" mnemonicParsing="false" onAction="#clickWrong" text="    2      " GridPane.columnIndex="1" />
+            <Button fx:id="stone1" mnemonicParsing="false" onAction="#clickWrong" text="    1      " />
+            <Button fx:id="stone4" mnemonicParsing="false" onAction="#clickWrong" text="    4      " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="stone3" mnemonicParsing="false" onAction="#clickWrong" text="    3      " GridPane.rowIndex="1" />
+            <Button fx:id="stone6" mnemonicParsing="false" onAction="#clickRight" text="    6      " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="stone5" mnemonicParsing="false" onAction="#clickWrong" text="    5      " GridPane.rowIndex="2" />
+            <Button fx:id="stone8" mnemonicParsing="false" onAction="#clickWrong" text="    8      " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="stone7" mnemonicParsing="false" onAction="#clickWrong" text="    7      " GridPane.rowIndex="3" />
+            <Button fx:id="item" mnemonicParsing="false" onAction="#item" text="Use Item" GridPane.columnIndex="2" />
             <MenuButton fx:id="menuButton" mnemonicParsing="false" text="Weigh Multiple Stones" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
@@ -88,7 +88,7 @@
       <Label layoutX="27.0" layoutY="46.0" prefHeight="17.0" prefWidth="200.0" text="7 of which weigh exactly the same" />
       <Label layoutX="27.0" layoutY="63.0" prefHeight="17.0" prefWidth="242.0" text="but one stone weighs less than the other 7." />
       <Label layoutX="27.0" layoutY="142.0" prefHeight="17.0" prefWidth="158.0" text="Click on a stone to weigh it" />
-      <Label layoutX="27.0" layoutY="200.0" text="Or maybe an item would help here?" />
+      <Label layoutX="396.0" layoutY="247.0" text="Or maybe an item would help here?" />
       <Label layoutX="27.0" layoutY="174.0" text="or weigh multiple stones. " />
       <ImageView fx:id="oneStone" fitHeight="150.0" fitWidth="200.0" layoutX="186.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
@@ -106,8 +106,9 @@
          </image>
       </ImageView>
       <Label fx:id="response" layoutX="471.0" layoutY="166.0" />
-      <Button fx:id="nextPuzzle" layoutX="247.0" layoutY="229.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" visible="false" />
-      <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;You turn around the corner and finally find the end of the maze.  " />
-      <Button fx:id="startPuzzle" layoutX="471.0" layoutY="342.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
+      <TextArea fx:id="finishText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;&#10;&#10;You solved the last puzzle, and hear a noise, you watch as a treasure chest comes up from the floor &#10;while at the same time, a door opens in the back, leading back out into the jungle where you came.  &#10;&#10;You drag the chest behind you as you exit the tomb, happy to escape. &#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;                                                                                                                                                       FIN." visible="false" />
+      <TextArea fx:id="storyText" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;&#10;&#10;You turn around the corner and finally find the end of the maze.  &#10;You enter the last room see a crude structure that looks like an old weight measuring scale.  As you approach&#10;the base of the structure you read that successfully completing this puzzle will grant you both the treasure&#10;sealed in this tomb and a way out." />
+      <Button fx:id="startPuzzle" layoutX="465.0" layoutY="330.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
+      <Button fx:id="nextPuzzle" layoutX="432.0" layoutY="162.0" mnemonicParsing="false" onAction="#finish" text="Claim the Treasure!" visible="false" />
    </children>
 </AnchorPane>

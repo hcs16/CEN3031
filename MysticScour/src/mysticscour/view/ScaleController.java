@@ -5,7 +5,6 @@
  */
 package mysticscour.view;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -16,13 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.MenuButton;
 import java.util.concurrent.TimeUnit;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
-import mysticscour.model.MazePuzzle;
 
 /**
  * FXML Controller class
@@ -47,10 +41,24 @@ public class ScaleController implements Initializable {
 
     @FXML
     private TextArea storyText;
-
+            
+    @FXML
+    private TextArea finishText;
+    
     @FXML
     private Button nextPuzzle;
 
+    public void showPuzzle() {
+        startPuzzle.setVisible(false);
+        storyText.setVisible(false);
+    }
+    
+    public void finish()
+    {
+        finishText.setVisible(true);
+        nextPuzzle.setVisible(false);
+    }
+    
     @FXML
     public MenuButton menuButton;
 
@@ -62,11 +70,6 @@ public class ScaleController implements Initializable {
 
     @FXML
     private ImageView original, same1, same2, same3, different1, different2, different3, oneStone, twoStones, threeStones;
-
-    public void showPuzzle() {
-        startPuzzle.setVisible(false);
-        storyText.setVisible(false);
-    }
 
     @FXML
     private void clickWrong(ActionEvent event) throws InterruptedException {
@@ -113,7 +116,6 @@ public class ScaleController implements Initializable {
         if (event.getSource() == item) {
             response.setText("Skipped");
             nextPuzzle.setVisible(true);
-
         }
     }
 
@@ -126,9 +128,7 @@ public class ScaleController implements Initializable {
     private void win(boolean winner) {
         response.setText("Completed");
         nextPuzzle.setVisible(true);
-
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

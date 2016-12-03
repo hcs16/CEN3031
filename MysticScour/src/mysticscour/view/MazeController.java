@@ -29,6 +29,10 @@ public class MazeController implements Initializable {
         storyText.setVisible(false);
     }
 
+    public void exit(ActionEvent event) throws IOException {
+        nextPuzzle.setVisible(true);
+    }
+
     public void loadNextPuzzle() throws IOException {
         Stage stage = null;
         Parent root = null;

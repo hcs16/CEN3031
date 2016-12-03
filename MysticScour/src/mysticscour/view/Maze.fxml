@@ -11,6 +11,7 @@
     </stylesheets>
    <children>
       <Button fx:id="nextPuzzle" layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#loadNextPuzzle" text="Next Puzzle" />
+      <TextArea layoutX="213.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" text="&#10;&#10;&#10;&#10;&#10;Placeholder for actual maze" />
       <TextArea fx:id="storyText" editable="false" prefHeight="400.0" prefWidth="600.0" text="&#10;&#10;&#10;&#10;&#10;The last two tiles are flipped and the unnatural light gets unbearably brighter for a second before falling to a &#10;tolerable level.  You can now see how to go in the next path.  &#10;&#10;You find two giant walls made of stone, about ten feet tall winding through various ways in a giant room.  &#10;You decide to push through this labyrinth to get to the other side, hoping to find a door to get through.&#10;" />
       <Button fx:id="startPuzzle" layoutX="504.0" layoutY="337.0" mnemonicParsing="false" onAction="#showPuzzle" text="Start Puzzle" />
    </children>
